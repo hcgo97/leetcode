@@ -9,7 +9,7 @@ class Solution(object):
             nums1 += nums2
             
             # 4. nums1 요소와 nums2 요소가 둘다 있는데 합친 경우라면 정렬
-            if m != 0:
+            if m > 0:
                 nums1.sort()
 
         """
