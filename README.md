@@ -1,4 +1,4 @@
-# Algorithm with LeetCode
+# 🤖 Algorithm with LeetCode
 
 ![LeetCode Logo](https://upload.wikimedia.org/wikipedia/commons/1/19/LeetCode_logo_black.png)
 
