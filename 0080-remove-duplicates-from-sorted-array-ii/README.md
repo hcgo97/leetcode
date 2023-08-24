@@ -54,8 +54,8 @@
 > 
 > ### **Constraints:**
 >
-> `1 <= nums.length <= 3 * 104`
-> `-104 <= nums[i] <= 104`
+> `1 <= nums.length <= 3 * 10^4`
+> `-10^4 <= nums[i] <= 10^4`
 > - `nums` 는 감소하지 않는 순서(ASC) 로 정렬됩니다.
 >
 <br></br>
