@@ -12,14 +12,14 @@ class Solution(object):
             # 1. 현재 요소가 set 에 없는 요소라면
             if num not in numSet:
                 
-                # 2. set 에 추가
-                numSet.add(num)
-                
-                # 3. index 위치로 현재 요소 옮기기
+                # 2. index 위치로 현재 요소 옮기기
                 nums[index] = num
                 
-                # 4. index 위치 +1 만큼 옮김
+                # 3. index 위치 +1 만큼 옮김
                 index += 1
+                
+                # 4. set 에 추가
+                numSet.add(num)
         
         return index
 
