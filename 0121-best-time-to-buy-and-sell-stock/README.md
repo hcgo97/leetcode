@@ -4,11 +4,11 @@
 
 > ### 문제 설명
 >
-> 가격 배열이 주어지는데, 가격[i]은 특정 주식의 째 날 가격입니다.
+> 가격 배열이 주어지는데, 가격`[i]`은 특정 주식의 째 날 가격입니다.
 >
 > 한 주식을 매수하기 위해 하루를 선택하고 해당 주식을 매도하기 위해 미래의 다른 날을 선택함으로써 수익을 극대화하고자 합니다.
 >
-> 이 거래에서 얻을 수 있는 최대 수익을 반환합니다. 수익을 얻을 수 없으면 0을 반환합니다.
+> 이 거래에서 얻을 수 있는 최대 수익을 반환합니다. 수익을 얻을 수 없으면 `0`을 반환합니다.
 > 
 > ### **Example 1:**
 > 
@@ -42,7 +42,7 @@
 
 ## 풀이 과정
 
-1. prices 배열이 비어있다면 `return 0` 처리 후 로직을 종료한다.
+1. `prices` 배열이 비어있다면 `return 0` 처리 후 로직을 종료한다.
     ```python
     if len(prices) == 0:
         return 0
@@ -54,7 +54,7 @@
     min_price = prices[0]
     ```
 
-3. prices 배열을 순회하는 for-in 문을 선언한다.
+3. `prices` 배열을 순회하는 `for-in` 문을 선언한다.
     ```python
     for price in prices:
     ```
@@ -71,7 +71,7 @@
             profit = max(price - min_price, profit)
     ```
 
-6. for-in 문이 종료되면 이익을 return 한다.
+6. `for-in` 문이 종료되면 이익을 `return` 한다.
     ```python
     return profit
     ```
@@ -126,7 +126,7 @@ class Solution(object):
 ## 다른 풀이 방법
 
 ### 더욱 간단한 풀이 방법 (시간: `O(n)`, 공간: `O(1)`)
-- _*링크:* https://leetcode.com/problems/rotate-array/discuss/269948/4-solutions-in-python-(From-easy-to-hard)
+- _*링크:* https://leetcode.com/problems/best-time-to-buy-and-sell-stock/discuss/39049/Easy-O(n)-Python-solution)
 
 ```python
 class Solution(object):
