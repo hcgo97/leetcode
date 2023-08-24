@@ -19,7 +19,7 @@ class Solution(object):
                 # 5. 다음 중복 허용 범위로 index 위치를 옮김
                 index += 1
         
-        # 5. 중복 제거된 nums 요소 개수 return
+        # 6. 중복 제거된 nums 요소 개수 return
         return index
         
         """
