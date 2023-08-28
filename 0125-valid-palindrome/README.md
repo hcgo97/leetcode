@@ -151,7 +151,21 @@ class Solution(object):
 
 ## 다른 풀이 방법
 
-### profit 배열을 활용한 방법 (시간: `O(n)`, 공간: `O(n)`)
+### `isalnum()` 함수를 사용하는 방법 (시간: `O(n)`, 공간: `O(n)`)
+- _*링크:* https://leetcode.com/problems/valid-palindrome/discuss/350929/Solution-in-Python-3-(beats-~100)-(two-lines)-(-O(1)-solution-as-well-)
+
+```python
+class Solution:
+    def isPalindrome(self, s: str) -> bool:
+        # 1. 문자열을 소문자로 변환하고 알파벳과 숫자만을 선택하여 리스트를 생성한다.
+        s = [i for i in s.lower() if i.isalnum()]
+        
+        # 2. 리스트 s 와 그 뒤집은 버전을 비교하여 팰린드롬 인지 여부를 확인한다.
+        return s == s[::-1]
+```
+<br></br>
+
+### 투 포인터를 사용하는 방법 (시간: `O(n)`, 공간: `O(n)`)
 - _*링크:* https://leetcode.com/problems/valid-palindrome/discuss/2438656/Very-Easy-oror-100-oror-Fully-Explained-(Java-C%2B%2B-Python-JS-Python3)
 
 ```python
@@ -180,3 +194,10 @@ class Solution(object):
         # 5. 반복문이 성공적으로 종료되면 문자열이 팰린드롬이라 할 수 있으므로 true 를 반환한다.
         return True
 ```
+
+## 회고
+_이번 문제는 파이썬을 더 잘 알았다면 더 잘 풀 수 있었을 것 같다._
+
+_나는 정규식 라이브러리를 사용하여 문자열을 바꾼 후 비교하는 방법을 사용했는데, 다른 풀이 방법에는 특수문자를 제외한 문자열만 선택하는 함수인 `isalnum()` 를 사용하여 푸는 방법을 사용하고 있었다._
+
+_또한 투 포인터 방법도 있었는데, 이 문제는 투 포인터 방법을 사용해도 `O(n)` 의 시간, 공간 복잡도가 나오므로 궂이 번거롭게 투 포인터 방법을 사용하지 않고 `isalnum()` 함수를 사용하는 방법이 더 간편하다고 생각이 든다._
