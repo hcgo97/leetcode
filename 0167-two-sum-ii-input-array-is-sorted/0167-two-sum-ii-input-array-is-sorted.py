@@ -12,21 +12,26 @@ class Solution(object):
         # 4-2. target 보다 작으면(>) left 를 +1 해서 포인터 위치를 옮긴다.
         # 4-3. target 과 같으면 left, right 를 +1 씩해서 return 한다.
 
+        # numbers 배열 요소가 2개밖에 없으면 index 1, 2 를 return
+        if len(numbers) == 2:
+            return [1, 2]
+        
         left = 0
         right = len(numbers) - 1
-
+        
         for i in range(len(numbers) - 1):
+            sumNumbers = numbers[left] + numbers[right]
             
-            print(numbers[left] + numbers[right])
-
-            if target == numbers[left] + numbers[right]:
-                return [left + 1, right + 1]
+            print(sumNumbers)
             
-            if target < numbers[left] + numbers[right]:
+            if target < sumNumbers:
                 right -= 1
 
-            if target > numbers[left] + numbers[right]:
+            elif target > sumNumbers:
                 left += 1
+                
+            else:
+                return [left + 1, right + 1]
 
 
 
