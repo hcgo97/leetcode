@@ -4,7 +4,7 @@ class Solution(object):
         # 1. 시작 지점을 가리키는 포인터 left를 초기화한다.
         left = 0
         
-        # 2. 배열의 최소 길이를 1로 초기화한다.
+        # 2. 배열의 최소 길이를 무한대로 설정한다.
         minLength = float('inf')
         
         # 3. 현재 부분 배열의 합을 나타내는 변수를 초기화한다.
@@ -27,11 +27,10 @@ class Solution(object):
                 # 9. left 포인터 변수를 + 1 만큼 이동시킨다.
                 left += 1
 
-        # 10. for 문 이 종료되면 min_length 를 return 한다.
+        # 10. for 문 이 종료되면 배열의 최소길이를 return 한다.
+        # 만약 배열의 최소 길이가 할당되지 않았다면 0을 return 한다.
         return minLength if minLength != float('inf') else 0
-
-            
-        
+    
         """
         :type target: int
         :type nums: List[int]
