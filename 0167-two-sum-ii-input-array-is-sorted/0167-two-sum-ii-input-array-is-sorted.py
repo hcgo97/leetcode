@@ -1,13 +1,12 @@
 class Solution(object):
     def twoSum(self, numbers, target):
-
+        
         # 1. numbers 배열 요소가 2개밖에 없으면 index 1, 2 를 return
         if len(numbers) == 2:
             return [1, 2]
         
-        # 2. left, right 포인터를 하나씩 만듬
-        # left 는 numbers[0] (배열의 맨첫번째),
-        # right 는 numbers[len(index) - 1] (배열의 맨끝) 에서 시작
+        # 2. 투 포인터 방법 사용하기 위해 left, right 변수 선언
+        # left 는 numbers[0] (배열의 가장 첫번째), right 는 numbers[len(index) - 1] (배열의 가장 마지막) 에 위치하도록 초기화
         left = 0
         right = len(numbers) - 1
         
@@ -27,7 +26,7 @@ class Solution(object):
             else:
                 # 4-3. target 과 같으면 left, right 를 +1 씩해서 return 한다.
                 return [left + 1, right + 1]
-
+            
         """
         :type numbers: List[int]
         :type target: int
