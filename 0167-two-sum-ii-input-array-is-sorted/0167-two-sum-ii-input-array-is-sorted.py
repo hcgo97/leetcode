@@ -22,8 +22,6 @@ class Solution(object):
         for i in range(len(numbers) - 1):
             sumNumbers = numbers[left] + numbers[right]
             
-            print(sumNumbers)
-            
             if target < sumNumbers:
                 right -= 1
 
